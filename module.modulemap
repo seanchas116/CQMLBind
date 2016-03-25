@@ -1,5 +1,5 @@
 module CQMLBind [system] {
-    header "qmlbind.h"
+    header "CQMLBind.h"
     link "qmlbind"
     export *
 }
