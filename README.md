@@ -30,5 +30,5 @@ let package = Package(
 ### Build your package
 
 ```
-swift build -Xcc -I/usr/local/include -Xlinker -L/usr/local/lib -Xlinker -rpath -Xlinker /usr/local/lib
+swift build -Xcc -I/usr/local/opt/libqmlbind/include -Xlinker -L/usr/local/opt/libqmlbind/lib -Xlinker -rpath -Xlinker /usr/local/opt/libqmlbind/lib
 ```
