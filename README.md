@@ -6,9 +6,16 @@
 
 CQMLBind requires Swift package manager.
 
+### Install libqmlbind
+
+```
+> brew tap seanchas116/libqmlbind
+> brew install libqmlbind
+```
+
 ### Add as dependency in your Package.swift
 
-First, add CQMLBind as a dependency package in your `Package.swift` file.
+In your `Package.swift` file:
 
 ```swift
 import PackageDescription
@@ -20,15 +27,8 @@ let package = Package(
 )
 ```
 
-### Build libqmlbind itself
-
-Then, build [libqmlbind](https://github.com/seanchas116/libqmlbind) itself.
-(instructions are written in libqmlbind readme)
-
 ### Build your package
 
-To build your package which uses CQMLBind, pass libqmlbind paths to compile and link successfully.
-
 ```
-swift build -Xcc -I/path/to/libqmlbind/qmlbind/include -Xlinker -L/path/to/libqmlbind/qmlbind/ -Xlinker -rpath -Xlinker /path/to/libqmlbind/qmlbind/
+swift build -Xcc -I/usr/local/include -Xlinker -L/usr/local/lib -Xlinker -rpath -Xlinker /usr/local/lib
 ```
